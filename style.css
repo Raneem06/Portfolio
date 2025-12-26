@@ -151,8 +151,8 @@ html {
 }
 
 .about-text .btn {
-  font-size: 1.6rem;   
-  padding: 12px 24px; 
+  font-size: 1.6rem;
+  padding: 12px 24px;
 }
 
 
@@ -186,53 +186,50 @@ html {
   transition: 0.3s ease;
 }
 
-/* Projects */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 4rem 7%;
+/* Projects Section */
+.projects-title {
+  font-size: 50px;
 }
 
-.card {
+/* Card Styling */
+.project-card {
   background: #fff;
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.card h3 {
-  font-size: 2.1rem;
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card h3 {
+  font-size: 2rem;
   font-weight: 600;
   margin-top: 1rem;
 }
 
+/* Line under title */
 .project-line {
-  width: 400px;
-  height: 1px;
+  width: 60%;
+  height: 2px;
   background: #000;
-  margin: 10px auto;
-  border-radius: 2px;
+  margin: 12px auto;
 }
 
-/* Description text */
+/* Description */
 .project-desc {
   font-size: 1.4rem;
   color: #555;
   line-height: 1.6;
-  margin-top: 0.8rem;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
+/* Image */
 .project-img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 /* Contact */
@@ -288,78 +285,127 @@ html {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/* Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+
+  html {
+    font-size: 58%;
+  }
+
+  /* Hero */
+  #hero h1 {
+    font-size: 3.2rem;
+  }
+
+  #hero p {
+    font-size: 1.5rem;
+  }
+
+  /* About */
+  .about {
+    padding: 5rem 4%;
+    gap: 2.5rem;
+  }
+
+  .about-text h1 {
+    font-size: 2.8rem;
+  }
+
+  /* Skills */
+  .skills h2 {
+    font-size: 3.6rem !important;
+  }
+
+  .cards {
+    font-size: 1.5rem;
+  }
+
+  /* Projects */
+  .project-card {
+    height: 100%;
+  }
+
+  .project-line {
+    width: 55%;
+  }
+
+  /* Contact */
+  .contact-info {
+    gap: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  html {
+    font-size: 56%;
+  }
+
+  /* Hero */
+  #hero {
+    padding: 0 1.5rem;
+  }
 
   #hero h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
+    line-height: 1.3;
   }
 
   #hero p {
     font-size: 1.4rem;
   }
 
+  /* About */
   .about {
-    flex-direction: column;
-    text-align: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
   }
 
+  .about-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .about-text p {
+    font-size: 1.4rem;
+  }
+
+  /* Skills */
   .skills h2 {
-    font-size: 38px !important;
+    font-size: 3.2rem !important;
   }
 
   .cards {
-    padding: 14px 22px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding: 12px 18px;
   }
 
-  .card h3 {
-    font-size: 1.9rem;
+  /* Projects */
+  .project-card {
+    padding: 1.8rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-line {
+    width: 50%;
   }
 
   .project-desc {
     font-size: 1.3rem;
   }
 
-  .projects {
-    padding: 3rem 5%;
+  /* Contact */
+  .contact-info {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
   }
 }
 
-@media (max-width: 576px) {
-  #hero h1 {
-    font-size: 2.2rem;
-  }
-
-  #hero p {
-    font-size: 1.2rem;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  .skills {
-    margin: 40px auto;
-  }
-
-  .skill-card {
-    gap: 12px;
-  }
-
-  .cards {
-    padding: 12px 20px;
-    font-size: 1.4rem;
-  }
-
-  .card {
-    padding: 1.5rem;
-  }
-
-  .project-line {
-    width: 45px;
-  }
-
-  .project-desc {
-    font-size: 1.25rem;
-  }
+section {
+  width: 100%;
+  overflow-x: hidden;
 }
